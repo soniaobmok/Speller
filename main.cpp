@@ -38,7 +38,11 @@ int main() {
         std::cout << std::endl << checker->getMethodName() << " ";
         std::cout << loadTime.count() << " " << checkTime.count() << " ";
         std::cout << checker->getCheckedWords() << " " << checker->getWrongWords();
+
+        delete checker;
     }
+
+    delete checkers;
 
     return 0;
 }
