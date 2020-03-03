@@ -7,3 +7,4 @@ unordered set (also from STL) or in custom containers - binary search tree and h
 Words from texts, which were not found in dictionary, are written in a new file.
 
 /* don't try to load all files from "texts" directory (in Checker.cpp). My laptop started to do that 36 minutes ago and it hasn't finished even first checking yet */
+/* or just don't load file "tolstoy.txt" - it is "War and Peace"!!1! */
