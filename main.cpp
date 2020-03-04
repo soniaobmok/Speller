@@ -12,12 +12,12 @@ int main() {
     auto *stdVectorChecker = new StdVectorChecker();
     auto *hashTableChecker = new HashTableChecker();
     auto *stdUnorderedSetChecker = new StdUnorderedSetChecker();
-//    auto *binTreeChecker = new BinTreeChecker();
+    auto *binTreeChecker = new BinTreeChecker();
 
     checkers->push_back(stdVectorChecker);
     checkers->push_back(hashTableChecker);
     checkers->push_back(stdUnorderedSetChecker);
-//    checkers->push_back(binTreeChecker);
+    checkers->push_back(binTreeChecker);
 
 
     for (auto checker : *checkers) {

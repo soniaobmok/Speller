@@ -1,6 +1,10 @@
 #include <fstream>
 #include <iostream>
 
+#include <vector>
+#include <algorithm>
+#include <random>
+
 #include "../headers/BinTreeChecker.h"
 
 BinTreeChecker::BinTreeChecker() {
@@ -23,13 +27,22 @@ void BinTreeChecker::loadDictionary() {
         return;
     }
     else {
+        std::vector<std::string> orderedDictionary;
         while (!fin.eof()) {
             std::string word;
             getline(fin, word);
 
-            dictionary->insert(dictionary->root, word);
+            orderedDictionary.push_back(word);
+//            dictionary->insert(dictionary->root, word);
         }
         fin.close();
+
+        auto rng = std::default_random_engine {};
+        std::shuffle(std::begin(orderedDictionary), std::end(orderedDictionary), rng);
+
+        for (auto &word :orderedDictionary) {
+            dictionary->insert(dictionary->root, word);
+        }
     }
 }
 
