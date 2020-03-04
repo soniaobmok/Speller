@@ -10,7 +10,7 @@
 class HashTableChecker : public Checker {
 public:
     HashTableChecker();
-    ~HashTableChecker() = default;
+    ~HashTableChecker() final = default;
     bool check(const std::string &) final;
     void loadDictionary() final;
 

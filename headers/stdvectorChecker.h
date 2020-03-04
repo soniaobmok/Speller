@@ -10,7 +10,7 @@
 class StdVectorChecker : public Checker {
 public:
     StdVectorChecker();
-    ~StdVectorChecker();
+    ~StdVectorChecker() final;
     bool check(const std::string &) final;
     void loadDictionary() final;
 

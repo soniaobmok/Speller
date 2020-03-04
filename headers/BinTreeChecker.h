@@ -10,7 +10,7 @@
 class BinTreeChecker : public Checker {
 public:
     BinTreeChecker();
-    ~BinTreeChecker();
+    ~BinTreeChecker() final;
     bool check(const std::string &) final;
     void loadDictionary() final;
 

@@ -4,6 +4,7 @@
 
 class Checker {
 public:
+    virtual ~Checker() = default;
     virtual void loadDictionary() = 0;
     virtual void loadText(const std::string &);
     virtual void loadAllTexts();

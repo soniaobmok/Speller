@@ -9,7 +9,7 @@
 class StdUnorderedSetChecker : public Checker {
 public:
     StdUnorderedSetChecker();
-    ~StdUnorderedSetChecker();
+    ~StdUnorderedSetChecker() final;
     bool check(const std::string &) final;
     void loadDictionary() final;
 
